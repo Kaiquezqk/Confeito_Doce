@@ -1,0 +1,55 @@
+:root {
+
+    --rosa-claro: #f7c9d5;
+    --rosa-super-claro: #f9dce6;
+    --rosa-donut: #f78da7;
+    --marrom: #6b2a2a;
+    --preto: #000000;
+    --branco: #ffffff;
+
+}
+
+
+
+body {
+    margin: 0;
+    background-image: url('./DONUTS.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   /* 🔥 deixa o fundo parado */
+}
+header {
+    width: 100%;
+    position: relative;   /* permite usar absolute dentro */
+    padding: 10px 0;
+}
+
+/* Logo fixo à esquerda */
+#logo {
+    position: absolute;
+    left: 50px;           /* encosta na esquerda */
+    top: 40px;            /* encosta no topo */
+    width: 120px;         /* pode mudar sem mover o menu */
+}
+
+/* Menu fixo à direita */
+.links {
+    position: absolute;
+    right: 150px;          /* encosta na direita */
+    top: 100px;            /* no topo */
+    display: flex;
+    gap: 60px;
+}
+
+.links a {
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+}
+#logo {
+    width: 400px;   /* Aumenta ou diminui aqui */
+}
+.links a {
+    font-size: 55px;   /* Aumenta ou diminui o MENU aqui */
+}
