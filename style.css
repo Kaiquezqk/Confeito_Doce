@@ -1,55 +1,158 @@
-:root {
-
-    --rosa-claro: #f7c9d5;
-    --rosa-super-claro: #f9dce6;
-    --rosa-donut: #f78da7;
-    --marrom: #6b2a2a;
-    --preto: #000000;
-    --branco: #ffffff;
-
+:root{
+  --rosa-claro:#f7c9d5;
+  --preto:#000;
+  --branco:#fff;
 }
-
-
-
 body {
-    margin: 0;
-    background-image: url('./DONUTS.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;   /* 🔥 deixa o fundo parado */
-}
-header {
-    width: 100%;
-    position: relative;   /* permite usar absolute dentro */
-    padding: 10px 0;
+    background-color: #FECEDC;
 }
 
-/* Logo fixo à esquerda */
-#logo {
-    position: absolute;
-    left: 50px;           /* encosta na esquerda */
-    top: 40px;            /* encosta no topo */
-    width: 120px;         /* pode mudar sem mover o menu */
+
+
+@font-face{
+  font-family:"Rosaline";
+  src: url("./Rosaline-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* Menu fixo à direita */
-.links {
-    position: absolute;
-    right: 150px;          /* encosta na direita */
-    top: 100px;            /* no topo */
+
+
+
+.banner{
+  background-image: url('./DONUTS.svg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  position: relative;
+}
+
+header{
+  position:absolute;
+  top:0;left:0;width:100%;
+  padding:18px 32px;
+  z-index:20;
+}
+.container-flex{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+
+#logo{
+  width:140px;
+  height:auto;
+  display:block;
+}
+
+
+.links{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.links a{
+  font-size:16px;
+  color:var(--preto);
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+
+#menu_botao{display:none;background:none;border:0;padding:6px;cursor:pointer}
+
+
+main{width:100%;}
+
+
+.sobre-nos{
+  background:var(--rosa-claro);
+  padding:60px 20px;
+  display:flex;
+  gap:40px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.sobre-nos .imagem img{
+  width:320px;
+  max-width:92%;
+  border-radius:20px;
+  object-fit:cover;
+}
+
+
+.texto-area{max-width:520px;padding:6px 12px}
+
+
+.titulo{
+  background:var(--preto);
+  color:var(--branco);
+  display:inline-block;
+  padding:10px 36px;
+  border-radius:24px;
+  font-size:20px;
+  text-align:center;
+  margin:0 auto 20px auto;
+}
+
+/* PARÁGRAFO */
+.texto{font-size:16px;line-height:1.6;color:#2b2b2b}
+
+/* GALERIA - DUAS IMAGENS CENTRADAS */
+.galeria-dupla{
+  text-align:center;
+  padding:60px 20px;
+  background:transparent;
+}
+.duas-imagens{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:28px;
+  margin-top:24px;
+  flex-wrap:wrap;
+}
+.duas-imagens img{
+  width:320px;
+  max-width:45%;
+  border-radius:16px;
+  display:block;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width:900px){
+  #logo{width:120px}
+  .links a{font-size:15px}
+  .sobre-nos{padding:40px 16px;gap:24px}
+  .duas-imagens img{max-width:48%}
+}
+
+@media (max-width:600px){
+  .links{display:none}
+  #menu_botao{display:inline-block}
+  .container-flex{justify-content:space-between}
+  .duas-imagens{gap:16px}
+  .duas-imagens img{width:48%}
+  .titulo{font-size:18px;padding:8px 24px}
+  .sobre-nos{flex-direction:column;padding:30px 12px}
+}
+
+
+
+.duas-imagens {
     display: flex;
-    gap: 60px;
+    justify-content: center;
+    gap: 60px; /
+    margin-top: 20px;
 }
 
-.links a {
-    font-size: 25px;
-    color: #000000;
-    text-decoration: none;
-}
-#logo {
-    width: 400px;   /* Aumenta ou diminui aqui */
-}
-.links a {
-    font-size: 55px;   /* Aumenta ou diminui o MENU aqui */
+
+.duas-imagens img {
+    width: 600px;
+    border-radius: 10px;
 }
